@@ -60,6 +60,7 @@ body {
 
 .header__menu a:hover {
   border-bottom: 3px solid brown;
+  cursor: pointer;
 }
 
 .content {
