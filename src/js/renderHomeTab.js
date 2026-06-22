@@ -1,4 +1,4 @@
-import logoImg from "../img/logo.png";
+import logoImg from "../img/logo.webp";
 
 const renderHomeTab = () => {
   const homeDiv = document.createElement("div");
