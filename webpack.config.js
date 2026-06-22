@@ -1,11 +1,12 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import path from "node:path";
 
 export default {
   mode: "development",
   entry: "./src/index.js",
   output: {
-    filename: "main.js",
+    filename: "js/main.js",
     path: path.resolve(import.meta.dirname, "dist"),
     clean: true,
   },
@@ -17,12 +18,22 @@ export default {
     new HtmlWebpackPlugin({
       template: "./src/template.html",
     }),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css'
+    })
   ],
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: 'img/[hash][ext]'
+        }
       },
     ],
   },

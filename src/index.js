@@ -1,3 +1,4 @@
+import './css/styles.css';
 import renderAddressTab from "./js/renderAddressTab.js";
 import renderHomeTab from "./js/renderHomeTab.js";
 import renderMenuTab from "./js/renderMenuTab.js";

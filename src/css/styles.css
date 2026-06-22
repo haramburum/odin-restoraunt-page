@@ -1,3 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
 body {
-  background-color: aquamarine;;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: burlywood;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 16px;
+}
+
+.title {
+  font-size: 6rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-bottom: 3px solid #a52a2a;
+}
+
+.header__menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/paw-print.png");
+  background-repeat: no-repeat;
+  background-position: 0 4px;
+  padding: 3px 30px;
+  color: brown;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.3s ease-in;
+}
+
+.header__menu a:hover {
+  border-bottom: 3px solid brown;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.home__logo {
+  width: 300px;
+  height: auto;
+}
+
+.home__text {
+  text-align: center;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  line-height: 1.6;
+  font-size: 1.3rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.menu__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  gap: 30px;
+  min-height: 250px;
+  border: 2px solid brown;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  background-color: rgb(196, 163, 121);
+  padding: 20px;
+}
+
+.menu-item__title {
+  background-image: url("../img/paw-print.png");
+  background-repeat: no-repeat;
+  background-position: 50% 30px;
+  padding-bottom: 30px;
+}
+
+.menu-item__descr {
+  text-align: center;
+}
+
+.menu-item__price {
+  color: #b7410e;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-top: auto;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  text-align: center;
+  gap: 30px;
+}
+
+.address__text,
+.address__time {
+  font-size: 1.3rem;
+}
+
+.address__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: center;
+}
+
+.address__phone {
+  background-image: url("../img/phone-icon.svg");
+}
+
+.address__email {
+  background-image: url("../img/email-icon.svg");
+}
+
+.address__phone,
+.address__email {
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  height: 24px;
+  filter: brightness(0) saturate(100%) invert(16%) sepia(60%) saturate(4137%)
+    hue-rotate(350deg) brightness(89%) contrast(79%);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 30px;
+  color: rgb(165, 137, 101);
+}
+
+.footer__link {
+  text-decoration: none;
+  color: rgb(165, 137, 101);
+  border-bottom: 1px solid transparent;
+  transition: border 0.3s ease-in;
+}
+
+.footer__link:hover {
+ border-bottom: 1px solid rgb(165, 137, 101);
 }
